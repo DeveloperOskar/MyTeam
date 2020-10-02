@@ -1,0 +1,65 @@
+#mobile-sign-in-cover input {
+  width: 280px;
+}
+#mobile-sign-in-cover button {
+  width: 280px;
+}
+#sign-in-header {
+  font-size: 150%;
+}
+#sign-in-error {
+  width: 280px;
+  background-color: #ff3333c0;
+  min-height: 40px;
+  text-align: center;
+  padding: 0.4rem 1rem 0.4rem 1rem;
+  display: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+#sign-in-error-icon {
+  display: none;
+}
+@media (min-width: 640px) {
+  #mobile-sign-in-cover input {
+    width: 280px;
+  }
+  #mobile-sign-in-cover button {
+    width: 280px;
+  }
+  #sign-in-header {
+    font-size: 170%;
+  }
+}
+
+@media (min-width: 830px) {
+  #mobile-sign-in-cover input {
+    width: 350px;
+    font-size: 1.1rem;
+  }
+  #sign-in-header {
+    font-size: 185%;
+  }
+  #mobile-sign-in-cover button {
+    width: 350px;
+  }
+  #sign-in-error {
+    width: 350px;
+  }
+}
+
+@media (min-width: 1150px) {
+  #mobile-sign-in-cover input {
+    width: 350px;
+    font-size: 1.1rem;
+  }
+  #mobile-sign-in-cover button {
+    width: 350px;
+  }
+  #sign-in-error {
+    width: 350px;
+  }
+  #sign-in-header {
+    font-size: 200%;
+  }
+}

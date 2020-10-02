@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { auth } from './components/firebase/Config';
+import { useAuthState } from 'react-firebase-hooks/auth';
+// import { useDocumentData } from 'react-firebase-hooks/firestore';
+import UnAuthenticatedApp from './unAuthenticatedApp';
+import AuthenticatedApp from './AuthenticatedApp';
+import EmailVerificationWall from './components/helpers/EmailVerificationWall';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [user] = useAuthState(auth);
+  if (user == null) {
+    return (
+      <>
+        <UnAuthenticatedApp />{' '}
+      </>
+    );
+  } else {
+    if (!user.emailVerified) {
+      console.log(5);
+      return <EmailVerificationWall />;
+    } else {
+      console.log(6);
+      return <AuthenticatedApp />;
+    }
+  }
 }
 
 export default App;

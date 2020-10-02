@@ -1,0 +1,133 @@
+#main-container {
+  display: flex;
+  width: 100%;
+}
+
+#signup-error-container {
+  display: none;
+  letter-spacing: 1px;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 5rem 0.5rem 5rem;
+  background-color: #ff3333c0;
+}
+#sign-up-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  background: #f0f2f5;
+}
+
+#brand-logo-singup {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 70px;
+}
+.signup-button {
+  box-shadow: 2px 3px #0000004d;
+  outline: none;
+  border: none;
+  width: 270px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  justify-content: center;
+}
+#sign-up-form button img {
+  height: 20px;
+}
+.one-input-wrapper {
+  width: 270px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.signup-input {
+  width: 100%;
+  height: 35px;
+  font-size: 1rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  outline: none;
+  background: #f0f2f5;
+}
+.datePicker {
+  height: 35px;
+  font-size: 1rem;
+  padding-left: 0px;
+  border: none;
+  outline: none;
+  background: #f0f2f5;
+  width: 242px;
+}
+
+.gray-text {
+  color: rgba(0, 0, 0, 0.815);
+}
+
+.gradient-text {
+  background-color: #000000;
+  background-image: linear-gradient(45deg, #808080, #051e34);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.signup-inputline {
+  width: 270px;
+}
+.error-msg-icon {
+  display: none;
+}
+.error-msg {
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #ff3333c0;
+  width: 270px;
+  letter-spacing: 1px;
+  font-size: 80%;
+  display: none;
+  text-align: center;
+  padding: 5px 10px 10px 0px;
+}
+.valid-input-icon {
+  display: none;
+}
+@media (min-width: 640px) {
+}
+
+@media (min-width: 830px) {
+}
+
+@media (min-width: 1055px) {
+  #brand-logo-singup {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+  }
+  #sign-up-form {
+    width: 50%;
+  }
+
+  #sign-up-img-container {
+    width: 50%;
+    min-height: calc(100vh - 60px);
+    background-color: #051e34;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(/imgs/signup_bg.png);
+    -webkit-backgorund-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+  }
+}

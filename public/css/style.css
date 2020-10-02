@@ -1,0 +1,88 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif !important;
+}
+
+html,
+body {
+  max-width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background-color: white;
+}
+
+.brand-logo-sm {
+  height: 50px;
+}
+.color-white {
+  color: white;
+}
+
+.facebookButton {
+  color: rgb(255, 255, 255);
+  background: #3b5998;
+}
+.facebookButton:hover {
+  background: #283c66;
+}
+
+.signInButton {
+  color: rgb(255, 255, 255);
+  background: #5cb85c;
+}
+.signInButton:hover {
+  background: #327732;
+}
+
+.abortButton {
+  color: rgb(255, 255, 255);
+  background: #d9534f;
+}
+
+.abortButton:hover {
+  background: #6e2926;
+}
+.googlebutton {
+  background-color: rgb(255, 255, 255);
+  color: #8f8f8f;
+}
+.googlebutton:hover {
+  background-color: rgb(192, 192, 192);
+}
+
+#email-wall {
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    90deg,
+    #243a4e #051e34
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    90deg,
+    #243a4e,
+    #051e34
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 100%;
+  flex-direction: column;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex start;
+  text-align: center;
+  padding: 0rem 2rem 0rem 2rem;
+}
+#email-wall button {
+  width: 300px;
+  height: 30px;
+  color: white;
+  background-color: rgba(245, 245, 245, 0.521);
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 2px 2px #ffffff6c;
+}
+#email-wall button:hover {
+  background-color: rgb(207, 207, 207);
+}
