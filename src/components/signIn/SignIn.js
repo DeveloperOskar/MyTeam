@@ -9,12 +9,7 @@ import {
   ValidateEmailInput,
   ValidatePasswordInput,
 } from '../helpers/Validation';
-import {
-  auth,
-  firestore,
-  googleProvider,
-  facebookProvider,
-} from '../firebase/Config';
+import { auth, googleProvider, facebookProvider } from '../firebase/Config';
 const SignIn = ({ toggleLoginContainer }) => {
   const [Email, setEmail] = useState('');
   const [Password, setPassword] = useState('');
@@ -33,21 +28,7 @@ const SignIn = ({ toggleLoginContainer }) => {
   const SignInWithGoogle = async () => {
     try {
       const user = await auth.signInWithPopup(googleProvider);
-      const userIsRegistred = await firestore
-        .collection('/users')
-        .doc(user.user.email)
-        .get();
-
-      if (userIsRegistred.exists) {
-        History.push('/');
-        return;
-      } else {
-        const users = await firestore.collection('/users');
-        await users.doc(user.user.email).set({
-          hasAllData: false,
-          typeOfAcc: '0',
-          birthDate: '0',
-        });
+      if (user) {
         History.push('/');
       }
     } catch (error) {
@@ -58,20 +39,7 @@ const SignIn = ({ toggleLoginContainer }) => {
   const SignInWithFaceBook = async () => {
     try {
       const user = await auth.signInWithPopup(facebookProvider);
-      const userIsRegistred = await firestore
-        .collection('/users')
-        .doc(user.user.email)
-        .get();
-      if (userIsRegistred.exists) {
-        History.push('/');
-        return;
-      } else {
-        const users = await firestore.collection('/users');
-        await users.doc(user.user.email).set({
-          hasAllData: false,
-          typeOfAcc: '0',
-          birthDate: '0',
-        });
+      if (user) {
         History.push('/');
       }
     } catch (error) {

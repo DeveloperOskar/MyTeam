@@ -1,7 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
-import 'firebase';
 const firebaseConfig = {
   apiKey: 'AIzaSyAj-bKXvCOl4b9xUrmm81-07owBaCNvmuE',
   authDomain: 'myteam-1459e.firebaseapp.com',

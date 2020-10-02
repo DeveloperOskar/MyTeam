@@ -13,7 +13,7 @@ import {
   faCheckCircle,
   faSignature,
 } from '@fortawesome/free-solid-svg-icons';
-import { auth, firestore } from '../firebase/Config';
+import { auth } from '../firebase/Config';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import {
@@ -106,12 +106,6 @@ const SignUp = () => {
           await user.user.sendEmailVerification();
           await user.user.updateProfile({
             displayName: `${FirstName} ${Lastname}`,
-          });
-          const users = await firestore.collection('/users');
-          await users.doc(Email).set({
-            hasAllData: true,
-            typeOfAcc: parseInt(AccountType),
-            birthDate: BirthDate,
           });
           setIsLoading(false);
           History.push('/');

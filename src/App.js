@@ -16,10 +16,8 @@ function App() {
     );
   } else {
     if (!user.emailVerified) {
-      console.log(5);
       return <EmailVerificationWall />;
     } else {
-      console.log(6);
       return <AuthenticatedApp />;
     }
   }
