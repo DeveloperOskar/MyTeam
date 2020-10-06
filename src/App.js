@@ -5,10 +5,14 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import UnAuthenticatedApp from './unAuthenticatedApp';
 import AuthenticatedApp from './AuthenticatedApp';
 import EmailVerificationWall from './components/helpers/EmailVerificationWall';
+import LoadingScreen from './components/loadingscreen/LoadingScreen';
 
 function App() {
-  const [user] = useAuthState(auth);
-  if (user == null) {
+  const [user, loading] = useAuthState(auth);
+
+  if (loading) {
+    return <LoadingScreen />;
+  } else if (user == null) {
     return (
       <>
         <UnAuthenticatedApp />{' '}
